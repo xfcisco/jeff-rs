@@ -1,6 +1,6 @@
 #![feature(option_insert)]
 use dashmap::DashMap;
-const TOKEN: &str = "";
+use std::env;
 
 use serenity :: {
     model::prelude::*,
@@ -13,7 +13,7 @@ static mut FetchTable: DashMap<UserId, String> = DashMap::<UserId, String>::new(
 
 #[tokio::main]
 async fn main() {
-    let mut bot = Client::builder(TOKEN)
+    let mut bot = Client::builder(&env::var("DISCORD_TOKEN").expect("token"))
         .event_handler(Handler)
         .await
         .expect("bot creation failed.");
