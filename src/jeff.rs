@@ -1,6 +1,6 @@
 #![feature(option_insert)]
 use dashmap::DashMap;
-const TOKEN: &str = "NjQ3OTY3NzE0MTk1MDEzNjQy.XdnY9Q.hn30D4E1hEl8MrU_OWxJdfi6VoA";
+const TOKEN: &str = "";
 
 use serenity :: {
     model::prelude::*,
